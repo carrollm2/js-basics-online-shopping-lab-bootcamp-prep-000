@@ -33,35 +33,36 @@ return cart
 function viewCart() {
   // write your code here
 
-  var statement = "In your cart, you have "
-
-
-  if(cart.length === 1){
-    statement += `${cart[0]['itemName']} at $${cart[0]['itemPrice']}.`
-    return console.log(statement)
-  }
-
-
-  if (cart.length === 2){
-    statement += `${cart[0]['itemName']} at $${cart[0]['itemPrice']} and ${cart[1]['itemName']} at $${cart[1]['itemPrice']}.`
-    return console.log(statement)
-
-  }
-
-  if (cart.length > 2){
-    for (var i = 0; i < cart.length; i++){
-      if (i < cart.length - 1){
-        statement += `${cart[i]['itemName']} at $${cart[i]['itemPrice']}, `
-      } else {
-        statement += `and ${cart[i]['itemName']} at $${cart[i]['itemPrice']}.`
-      }
-    }
-    return console.log(statement)
-  }
-
   if (cart.length === 0){
     return console.log("Your shopping cart is empty.")
+  
+    
+  } else {
+    
+    var statement = "In your cart, you have "
+  
+    for (var i = 0; i < cart.length; i++){
+      var obj = {}
+      obj = cart[i]
+    
+    
+      statement += `${Object.keys(obj)} at $${Object.values(obj)}`
+      
+      if (i === cart.length - 1){
+        statement += `.`
+      } else if (i === cart.length - 2) {
+        if (cart.length <= 2){
+          statement += ` and `
+        } else {
+          statement += `, and `
+        }
+      } else {
+        statement += `, `
+      }
+    
 
+    }
+    return console.log(statement) 
   }
 
 
