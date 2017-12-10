@@ -74,7 +74,7 @@ function total() {
     console.log(Object.values(cart[i]))
     sum += parseFloat(Object.values(cart[i]))
   }
-  
+
   return sum
 
 }
@@ -88,7 +88,7 @@ function removeFromCart(item) {
       updatedCart.push(cart[i])
     }
   }
-      
+
   if (cart.length !== updatedCart.length){
     cart = updatedCart
     return cart
@@ -103,13 +103,13 @@ function placeOrder(cardNumber) {
   // write your code here
   if (cardNumber) {
     var totalOrder = total()
-    
-    console.log(totalOrder, "totalOrder") 
+
+    console.log(totalOrder, "totalOrder")
     console.log(`Your total cost is $${totalOrder}, which will be charged to the card ${cardNumber}.`)
     cart = []
     return cart
   } else {
     return console.log("Sorry, we don't have your credit card on file for you")
   }
-  
+
 }
