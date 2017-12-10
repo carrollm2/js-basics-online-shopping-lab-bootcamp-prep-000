@@ -35,19 +35,19 @@ function viewCart() {
 
   if (cart.length === 0){
     return console.log("Your shopping cart is empty.")
-  
-    
+
+
   } else {
-    
+
     var statement = "In your cart, you have "
-  
+
     for (var i = 0; i < cart.length; i++){
       var obj = {}
       obj = cart[i]
-    
-    
+
+
       statement += `${Object.keys(obj)} at $${Object.values(obj)}`
-      
+
       if (i === cart.length - 1){
         statement += `.`
       } else if (i === cart.length - 2) {
@@ -59,10 +59,10 @@ function viewCart() {
       } else {
         statement += `, `
       }
-    
+
 
     }
-    return console.log(statement) 
+    return console.log(statement)
   }
 
 
