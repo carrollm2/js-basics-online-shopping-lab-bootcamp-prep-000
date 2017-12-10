@@ -108,8 +108,8 @@ function placeOrder(cardNumber) {
     cart = []
     return cart
   } else {
-    console.log("Sorry, we don't have your credit card on file for you.")
-    return cart
+    return console.log("Sorry, we don\'t have your credit card on file for you.")
+
   }
 
 }
