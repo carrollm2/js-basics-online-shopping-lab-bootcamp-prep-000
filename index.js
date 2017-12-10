@@ -60,11 +60,9 @@ function viewCart() {
         statement += `, `
       }
 
-
     }
     return console.log(statement)
   }
-
 
 }
 
@@ -110,7 +108,7 @@ function placeOrder(cardNumber) {
     cart = []
     return cart
   } else {
-    return console.log("Sorry, we don't have your credit card on file for you")
+    return console.log("Sorry, we don't have your credit card on file for you.")
   }
 
 }
